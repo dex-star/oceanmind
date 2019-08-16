@@ -1,0 +1,17 @@
+.error{
+    background-color: #E74F4F;
+    position: absolute;
+    top: 0px;
+    padding: 5px 0 ;
+    border-radius:  0 0 5px 5px;
+    color: #fff;
+    width: 50%;
+    text-align: center;
+    display: none;
+}
+
+input[type="submit"] {
+    width: 99%;
+    margin: 0 auto;
+    padding: 13px 0;
+}

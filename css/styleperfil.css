@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Poppins:300,400,500,600,700,800,900");
+.btn-perfil{
+    border-radius: 30px;
+    font-size: 1rem;
+    padding: 5px 30px;
+    overflow:hidden;
+    background: #FFB300;
+    color: #fff;
+    border: 2.5px solid #FDC134;
+    margin: 20px 20px 40px;
+    
+}
+
+.btn-perfil:hover{
+    background: #FDC134;
+    color: #fff;
+}
+
+.navbar-perfil{
+    
+    background: #FFC948
+}
+
+.progress-bar-color{
+    background: #FFB300;
+    border-radius: 10px;
+}
+.progress{
+    border-radius: 10px;
+}
+
+.progress-text{
+    
+    font-size: 20px;
+    margin: 10px; 
+    font-family: lato;
+    color: #ffffff;
+    
+}
+
+.titulo-logros{
+    text-align: left;
+    font-family: lato;
+    font-size: 25px;
+    color: #31C6C7;
+}
+.titulo-avatars{
+    text-align: left;
+    font-family: lato;
+    font-size: 25px;
+    color: #31C6C7;
+}
+
+.img-trofeo{
+    width: 60%;
+    margin: 15px auto 15px ;
+    align-content: center;
+    
+    
+}
+
+.img-sad{
+    width: 60%;
+    margin: 5px auto 10px ;
+    text-align: center;
+    font-size: 60px;
+    color:  #31C6C7;
+    
+    
+}
+
+.titulo-sad{
+    font-family: 'poppins';
+    font-size: 16px;
+    color: #5C5C5C;
+    text-align: center;
+    font-weight: 400;
+    
+    
+}
+
+.fondo-trofeo {
+    padding: 10px;
+    box-shadow: 0px 10px 15px 1px #e0e0e0;
+    border-radius: 15px;
+    border: 2px solid #e6e6e6;
+    
+}
+
+.fondo-trofeo:hover {    
+    box-shadow: 1px 1px 3px 3px rgba(49, 198, 199, 0.47); 
+}
+
+.img-trofeo:hover{
+ width: 65%;   
+}
+
+
+.hr-logros{
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #31C6C7, rgba(0, 0, 0, 0));
+}
+
+.titulo-trofeo{
+    font-family: 'poppins';
+    font-size: 16px;
+    color: #5C5C5C;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: -10px;
+}
+
+.num-trofeo{
+    color: #005B90 !important;
+    font-family: poppins;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+}
