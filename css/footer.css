@@ -1,0 +1,81 @@
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+
+.fa-twitter, .fa-facebook, .fa-instagram, .fa-youtube{
+    color: #308ee0;
+    margin: 8px;
+	
+}
+
+
+.fa-facebook:hover, .fa-twitter:hover, .fa-instagram:hover, .fa-youtube:hover{
+    color: #e08230;
+    cursor: pointer;
+}
+
+footer.main-footer {
+  
+  width: 100%;
+  bottom: 0;
+  background:#c4e0fc;
+  padding: 8px 0;
+}
+
+footer.main-footer p {
+  font-size: 1rem;
+  color: #404040;
+  margin: 0;
+}
+.text-titulo{
+	color:#404040;
+	padding: 10px;
+	font-family: 'Poppins';
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+.text-white2{
+	color: #404040;
+	font-size: 12px;
+	font-weight: 500;
+	
+}
+.text-white2:hover{
+	color: #308ee0;
+}
+
+footer.main-footer p:hover {
+  
+  color: #308ee0;
+  
+}
+
+/* MAIN FOOTER MEDIAQUERIES ------------------------- */
+@media (max-width: 575px) {
+  footer.main-footer div[class*="col-"] {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 768px) {
+  footer.main-footer p {
+    font-size: 0.9em;
+  }
+}
+ 

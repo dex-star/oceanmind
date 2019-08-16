@@ -1,0 +1,625 @@
+
+.form-fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.form-legend {
+  padding: 0;
+  margin-bottom: 28px;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: #777777;
+  border: 0;
+  border-bottom: 2px solid #eee;
+  white-space: normal;
+}
+
+.form-legend small {
+  font-size: 0.8rem;
+  color: #b3b3b3;
+}
+
+/**
+ * Form inputs and groups
+ */
+.form-controlGroup {
+  position: relative;
+  margin-top: 56px;
+  margin-bottom: 56px;
+}
+
+.form-legend + .form-controlGroup {
+  margin-top: 28px;
+}
+
+.form-label {
+  color: #777777;
+  
+  transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  font-size: 1.2rem;
+}
+
+.form-label2{
+    
+  color: #777777;
+  font-size: 1.2rem;
+
+}
+
+.form-label small {
+  font-weight: normal;
+  color: #c4c4c4;
+}
+
+.form-input {
+  height: 2.5em;
+  padding: .5em 0;
+  font-size: 1rem;
+ 
+  line-height: 1.2;
+  color: #444;
+  font-weight: normal;
+  background-color: transparent;
+  border-radius: 0 !important;
+  background-clip: padding-box;
+  border: 0;
+}
+
+.form-input[type="image"], .form-input[type="checkbox"], .form-input[type="radio"], .form-input[type="range"] {
+  margin: 3px 0;
+}
+
+.form-input[type="file"] {
+  background-color: #f1f1f1;
+}
+
+.form-input[type="color"] {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.form-input[disabled], .form-input[readonly] {
+  cursor: not-allowed;
+}
+
+.form-input--textarea {
+  min-height: 60px;
+}
+
+.form-input:focus:only-of-type ~ .form-label,
+.form-input:valid:only-of-type ~ .form-label {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  font-size: 1.2rem;
+}
+
+.form-input:only-of-type ~ .form-label {
+  -webkit-transform: translateY(0.5em);
+  transform: translateY(0.5em);
+  font-size: 100%;
+}
+
+.form-input:focus ~ .form-label {
+  color: #308ee0;
+}
+
+.form-input:focus ~ .form-inputBar::before {
+  width: 100%;
+  left: 0;
+}
+
+.form-inputBar {
+  position: relative;
+  display: block;
+  border-bottom: 2px solid #ccc;
+}
+
+.form-inputBar::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  z-index: 2;
+  width: 0;
+  height: 2px;
+  background: #308ee0;
+  transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.form-input--select {
+  background-color: transparent;
+  border-right: 0;
+}
+
+.form-input-file {
+  font-size: 1rem;
+}
+
+/**
+ * Form actions
+ */
+.form-actions {
+  padding: 28px 20px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+}
+
+.form-actions .btn {
+  margin-right: 10px;
+}
+
+.form-actions .btn:last-child {
+  margin-right: 0;
+}
+
+/**
+ * Form validation messages
+ */
+.form-controlGroup .form-message {
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+}
+
+.form-actions .form-message {
+  padding: 0.5em;
+}
+
+/**
+ * Form field feedback states
+ */
+.has-warning {
+  color: #f4aa47;
+}
+
+.form-controlGroup.has-warning .form-inputBar {
+  border-color: #f4aa47;
+}
+
+.form-controlGroup.has-warning .form-message {
+  display: block;
+  color: #f4aa47;
+}
+
+.has-error {
+  color: #B94A4D;
+}
+
+.form-controlGroup.has-error .form-inputBar {
+  border-color: #B94A4D;
+}
+
+.form-controlGroup.has-error .form-message {
+  display: block;
+  color: #B94A4D;
+}
+
+.has-success {
+  color: #16c98d;
+}
+
+.form-controlGroup.has-success .form-inputBar {
+  border-color: #16c98d;
+}
+
+.form-controlGroup.has-success .form-message {
+  display: block;
+  color: #16c98d;
+}
+
+.has-info {
+  color: #288ad6;
+}
+
+.form-controlGroup.has-info .form-inputBar {
+  border-color: #288ad6;
+}
+
+.form-controlGroup.has-info .form-message {
+  display: block;
+  color: #288ad6;
+}
+
+/**
+ * Placeholder text
+ * =================================
+ * Gets special styles; can't be bundled together though for some reason
+ */
+:-ms-input-placeholder {
+  color: #777777;
+}
+
+:-moz-placeholder {
+  color: #777777;
+}
+
+::-webkit-input-placeholder {
+  color: #777777;
+}
+
+/**
+ * Custom controls
+ * - Radios/checkboxes
+ * - Select element
+ * - File upload
+ */
+/**
+ * Custom Checkboxes and radios
+ * =================================
+ * IE9+
+ *
+ * --------------------------------
+ *
+ * Checkbox button example HTML
+ *
+ *	<label class="control control--custom" for="checkbox1">
+ *		<input class="control--custom-input" type="checkbox" id="checkbox1" name="myCheckbox" value="A value"/>
+ *		<span class="control-indicator control-indicator--checkbox"></span>
+ *		My Checkbox Label Text
+ *	</label>
+ *
+ * -------------------------------
+ *
+ * Radio button example HTML
+ *
+ *	<label class="control control--custom" for="radio1">
+ *		<input class="control--custom-input" type="radio" id="radio1" name="myRadioBtn" value="A value"/>
+ *		<span class="control-indicator control-indicator--radio"></span>
+ *		My Radio Button Label Text
+ * 	</label>
+ *
+ * ================================= */
+.control--custom {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-left: 2.3em;
+}
+
+.control--custom--inline {
+  display: inline-block;
+  padding-right: 2em;
+}
+
+.control--custom-input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.control-indicator {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  border: 1px solid #ccc;
+  background-color: #ccc;
+  vertical-align: middle;
+  margin-top: 0;
+  box-shadow: 0 0 0 2px transparent, 0 0 0 0 transparent;
+}
+
+.control--custom-input:focus ~ .control-indicator {
+  box-shadow: 0 0 0 2px #f1f1f1, 0 0 0 3px #181830;
+}
+
+.control-indicator--checkbox,
+.control-indicator--tickbox {
+  border-radius: .2em;
+}
+
+.control-indicator--checkbox:before, .control-indicator--checkbox:after,
+.control-indicator--tickbox:before,
+.control-indicator--tickbox:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  display: block;
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+}
+
+.control-indicator--checkbox:before, .control-indicator--checkbox:after {
+  top: 50%;
+  width: 90%;
+  height: 0.1em;
+  background-color: #f1f1f1;
+}
+
+.control-indicator--checkbox:before {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  transform: translate(-50%, -50%) rotate(45deg) scale(0);
+}
+
+.control-indicator--checkbox:after {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg) scale(0);
+  transform: translate(-50%, -50%) rotate(-45deg) scale(0);
+}
+
+.control-indicator--tickbox:before {
+  top: 0;
+  -webkit-transform: translateX(-50%) rotate(45deg) scale(0);
+  transform: translateX(-50%) rotate(45deg) scale(0);
+  border: 0.1em solid #f1f1f1;
+  background-color: transparent;
+  width: 40%;
+  height: 80%;
+  border-top: 0;
+  border-left: 0;
+}
+
+.control-indicator--tickbox:after {
+  display: none;
+}
+
+.control--custom-input:checked ~ .control-indicator--checkbox,
+.control--custom-input:checked ~ .control-indicator--tickbox {
+  background-color: #181830;
+  border: 0.1em solid #181830;
+}
+
+.control--custom-input:checked ~ .control-indicator--checkbox:before, .control--custom-input:checked ~ .control-indicator--checkbox:after,
+.control--custom-input:checked ~ .control-indicator--tickbox:before,
+.control--custom-input:checked ~ .control-indicator--tickbox:after {
+  opacity: 1;
+}
+
+.control--custom-input:checked ~ .control-indicator--tickbox:before, .control--custom-input:checked ~ .control-indicator--tickbox:after {
+  -webkit-transform: translateX(-50%) rotate(45deg) scale(1);
+  transform: translateX(-50%) rotate(45deg) scale(1);
+}
+
+.control--custom-input:checked ~ .control-indicator--checkbox:before {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+
+.control--custom-input:checked ~ .control-indicator--checkbox:after {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+  transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+}
+
+.control-indicator--radio {
+  border-radius: 50%;
+}
+
+.control--custom-input:checked ~ .control-indicator--radio {
+  background-color: #f1f1f1;
+  border: 0.3em solid #181830;
+}
+
+/**
+ * Custom select element
+ * =================================
+ * Firefox 39+, IE10+
+ *
+ *	<div class="form-controlGroup">
+ *			<label for="cs-choice" class="form-label">Custom select</label>
+ *			<div class="form-controlGroup-inputWrapper form-controlGroup-inputWrapper--select">
+ *				<select id="cs-choice" name="cs-choice" class="form-input form-input--select">
+ *					<option value="--">Select title</option>
+ *					<option value="Mr">Mr</option>
+ *					<option value="Mrs">Mrs</option>
+ *				</select>
+ *			</div>
+ *	</div>
+ */
+.form-controlGroup-inputWrapper--select {
+  position: relative;
+  display: block;
+  padding: 0;
+  /* Custom arrow sits on top of the select - could be an image, SVG, icon font, etc. or the arrow could just baked into the bg image on the select */
+}
+
+.form-controlGroup-inputWrapper--select:after {
+  color: #181830;
+  content: "\25BC";
+  font-size: .7em;
+  padding: 0;
+  position: absolute;
+  right: 1.2em;
+  top: 50%;
+  margin-top: -9px;
+  z-index: 2;
+  /* These hacks make the select behind the arrow clickable in some browsers */
+  -ms-pointer-events: none;
+  pointer-events: none;
+  background: url(#);
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .form-controlGroup-inputWrapper--select:after {
+    display: none;
+  }
+}
+.form-controlGroup-inputWrapper--select .form-input--select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .form-controlGroup-inputWrapper--select .form-input--select:focus::-ms-value {
+    background: transparent;
+    color: #222;
+  }
+}
+option {
+  font-weight: normal;
+}
+
+/**
+ * Custom file input
+ * =================================
+ * <div class="form-controlGroup">
+		<label class="form-label" for="file">File upload</label>
+
+		<div class="form-controlGroup-inputWrapper">
+			<label class="form-input form-input--file">
+				<span class="form-input--file-text">Choose file..</span>
+				<span class="form-input--file-button">Browse</span>
+				<input class="form-input--file-input" type="file" id="file" accept="image/*" size="14" />
+			</label>
+		</div>
+	</div>
+ */
+/**
+ * Custom file input
+ */
+.form-input--file {
+  position: relative;
+  overflow: hidden;
+  padding-right: 120px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.form-input-file {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.form-input--file-button {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: -1px;
+  bottom: 0;
+  padding: .44em 1em 0;
+  background-color: #d9d9d9;
+}
+
+.form-input--file-button:hover {
+  background-color: #ccc;
+}
+
+/**
+ * Base form styles
+ * =================================
+ * Demo: http://trykickoff.com/demos/forms.html#layout-example-labels-above
+ * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
+ * Usage:
+  	<div class="form-controlGroup">
+  		<label for="name" class="form-label">Name</label>
+  		<div class="form-controlGroup-inputWrapper">
+  			<input type="text" id="name" placeholder="Zander Martineau" class="form-input"/>
+  		</div>
+  	</div>
+ */
+.form-legend {
+  display: block;
+  width: 100%;
+}
+
+/**
+ * Form inputs and groups
+ */
+.form-legend + .form-controlGroup {
+  -webkit-margin-top-collapse: separate;
+}
+
+.form-label {
+  display: block;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  vertical-align: baseline;
+}
+
+.form-input:focus {
+  outline: 0;
+  outline: thin dotted \9;
+}
+
+.form-input[type="image"], .form-input[type="checkbox"], .form-input[type="radio"], .form-input[type="range"] {
+  width: auto;
+  height: auto;
+  padding: 0;
+  line-height: normal;
+  cursor: pointer;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.form-input[type="image"] {
+  border: 0;
+}
+
+.form-input[type="file"] {
+  width: auto;
+  height: 28px;
+  padding: initial;
+  line-height: initial;
+  border: initial;
+  background-color: initial;
+}
+
+.form-input[type="hidden"] {
+  display: none;
+}
+
+.form-input[type="password"] {
+  font-family: sans-serif;
+}
+
+.form-input[type="range"] {
+  width: 100%;
+}
+
+.form-input > .radio:first-child,
+.form-input > .checkbox:first-child {
+  padding-top: 5px;
+}
+
+.form-input[disabled], .form-input[readonly] {
+  cursor: not-allowed;
+}
+
+.form-input--textarea {
+  height: auto;
+  min-height: 5em;
+  resize: vertical;
+}
+
+.form-input--textarea--uneditable {
+  width: auto;
+  height: auto;
+}
+
+.form-input-file {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  vertical-align: middle;
+  line-height: 1em;
+}
+
+.form-input-file:focus {
+  outline: none;
+}
+
+
